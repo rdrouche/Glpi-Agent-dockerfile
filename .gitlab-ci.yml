@@ -19,7 +19,6 @@ build:
       else
         export TAG_VERSION=$CI_COMMIT_REF_SLUG
       fi
-    - echo "Tentative de build avec le tag : ${TAG_VERSION}"
     - docker build -t $IMAGE_NAME:$TAG_VERSION -f Dockerfile --no-cache .
     - docker push $IMAGE_NAME:$TAG_VERSION
   rules:
