@@ -8,6 +8,8 @@ build:
     DOCKER_DRIVER: "overlay2"
     IMAGE_NAME: "rdrit/glpi-agent"
   before_script:
+    - apk add --no-cache docker-cli
+    - docker info
     - docker login -u $CI_HUB_DOCKER_LOGIN -p $CI_HUB_DOCKER_PASSWORD
   script:
     # On définit TAG_VERSION en priorité sur le tag Git, sinon sur "latest"
