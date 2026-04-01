@@ -8,6 +8,7 @@ build:
     #DOCKER_DRIVER: "overlay2"
     DOCKER_HOST: unix:///var/run/docker.sock
     IMAGE_NAME: "rdrit/glpi-agent"
+    GIT_STRATEGY: none
   before_script:
     - apk add --no-cache docker-cli
     - docker info
