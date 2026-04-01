@@ -4,10 +4,10 @@ FROM ubuntu:24.04
 
 LABEL org.opencontainers.image.authors="Romain" \
       com.rdritcom.ubuntu_version="24.04" \
-      com.rdritcom.glpi-agent="1.16" 
+      com.rdritcom.glpi-agent="1.17" 
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV GLPI_AGENT_VERSION=1.16
+ENV GLPI_AGENT_VERSION=1.17
 ENV GLPI_AGENT_URL=https://github.com/glpi-project/glpi-agent/releases/download/${GLPI_AGENT_VERSION}/glpi-agent_${GLPI_AGENT_VERSION}_linux_all.deb
 ENV GLPI_AGENT_NET_URL=https://github.com/glpi-project/glpi-agent/releases/download/${GLPI_AGENT_VERSION}/glpi-agent-task-network_${GLPI_AGENT_VERSION}-1_all.deb
 ENV GLPI_AGENT_INSTALLER_URL=https://github.com/glpi-project/glpi-agent/releases/download/${GLPI_AGENT_VERSION}/glpi-agent-${GLPI_AGENT_VERSION}-linux-installer.pl
