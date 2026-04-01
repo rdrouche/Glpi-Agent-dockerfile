@@ -20,6 +20,7 @@ build:
     # No cache
     #- docker build -t $IMAGE_NAME:$TAG_VERSION -f Dockerfile --no-cache .
     # With cache
+    - ls -la
     - docker build -t $IMAGE_NAME:$TAG_VERSION -f Dockerfile .
     - docker push $IMAGE_NAME:$TAG_VERSION
   rules:
